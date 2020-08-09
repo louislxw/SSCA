@@ -1,8 +1,8 @@
 function [Sx,alphao,fo]=autossca(x,fs,df,dalpha)
 %   AUTOSSCA(X,FS,DF,DALPHA) computes the spectral auto-
 %   correlation density function estimate of the signals X,
-%   by using the Strip Spectral Correlation Algorithm (SSCA). 
-%   Make sure that DF is much bigger than DALPHA in order to 
+%   by using the Strip Spectral Correlation Algorithm (SSCA).
+%   Make sure that DF is much bigger than DALPHA in order to
 %   have a reliable estimate.
 %
 %   INPUTS:
@@ -17,6 +17,9 @@ function [Sx,alphao,fo]=autossca(x,fs,df,dalpha)
 %   FO      - spectrum frequency.
 %
 %   Credits to E.L.Da Costa
+%
+% e.g. x = (1:2240)'; fs = 1000; df = 5; dalpha = 0.5; % Add by Louis
+% or x = repmat((0:0.1:0.3)', 560, 1); fs = 1000; df = 5; dalpha = 0.5; % Add by Louis
 
 if nargin ~= 4
     error('Wrong number of arguments.');
